@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | MCS Pages</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/mcs_logo.png" />
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.75);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .contact-form label {
+            display: block;
+            margin: 1rem 0 0.5rem;
+            color: white;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #0000FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .parallax {
+            background-image: url('images/digital_circuit_network.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+            .nav {
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav .logo img {
+            width: 40px;
+        }
+        .nav .menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .nav .menu div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background-color: #000;
+                flex-direction: column;
+                width: 200px;
+                padding: 1rem;
+                border-radius: 6px;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .nav .menu {
+                display: flex;
+            }
+        }
+</style>
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('show');
+    }
+</script>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="images/mcs_logo.png" alt="MCS Logo">
+            <span style="color: white; font-weight: bold;">MCS Pages</span>
+        </div>
+        <div class="menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="get_help.html">Get Help</a>
+        </div>
+    </div>
+
+    <!-- Static Hero Section -->
+    <section style="background-color: #000000; color: white; text-align: center; padding: 4rem 2rem;">
+        <img src="images/mcs_logo.png" alt="MCS Pages Logo" style="width: 120px; margin-bottom: 1rem;" />
+        <h1>Contact Us</h1>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 1rem auto;">
+            Have a question? Want to get involved? Looking for help? Reach out below and we’ll get back to you as soon as we can.
+        </p>
+    </section>
+
+    <!-- Parallax Video Section -->
+    <section class="video-hero">
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="videos/check-wifi-5g.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 style="font-size: 2rem;">We’re here to help.</h2>
+            <p style="margin-top: 0.5rem;">Let’s get you connected.</p>
+        </div>
+    </section>
+
+    <!-- Contact Intro Section -->
+<section class="parallax" style="padding: 3rem 2rem;">
+  <div style="max-width: 960px; margin: auto; background-color: rgba(0, 0, 0, 0.75); padding: 2rem; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.5); color: white;">
+    <h2 style="text-align: center;">We Want to Hear From You</h2>
+    <p style="margin-top: 1rem;">
+      At MCS Pages, we believe no one should be left behind in the digital age. Whether you're a senior trying to FaceTime your grandkids, a single parent building a side hustle, or someone looking to give back to the community—we're here for you. If you have questions, ideas, or just want to get involved, reach out! Together, we’re creating digital access that leads to real-life opportunity.
+    </p>
+    <p style="margin-top: 1rem;">
+      Use the form below to send us a message and someone from our team will be in touch as soon as possible.
+    </p>
+  </div>
+</section>
+
+<!-- Contact Form Section -->
+    <section class="parallax" style="padding: 3rem 2rem;">
+        <form class="contact-form" action="mailto:info@mcspages.com" method="POST" enctype="text/plain">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="parallax" style="background-color: rgba(0, 0, 0, 0.9); color: white; text-align: center; padding: 1.5rem 1rem; width: 100%;">
+        <p>MCS Pages Inc. &copy; 2025 • Empowering communities through digital access</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | MCS Pages</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/mcs_logo.png" />
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .nav {
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav .logo img {
+            width: 40px;
+        }
+        .nav .menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .nav .menu div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background-color: #000;
+                flex-direction: column;
+                width: 200px;
+                padding: 1rem;
+                border-radius: 6px;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .nav .menu {
+                display: flex;
+            }
+        }
+        .parallax {
+            background-image: url('images/digital_circuit_network.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="images/mcs_logo.png" alt="MCS Logo">
+            <span style="color: white; font-weight: bold;">MCS Pages</span>
+        </div>
+        <div class="menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="get_help.html">Get Help</a>
+        </div>
+    </div>
+
+    <!-- Static Hero Section -->
+    <section style="background-color: #000000; color: white; text-align: center; padding: 4rem 2rem;">
+        <img src="images/mcs_logo.png" alt="MCS Pages Logo" style="width: 120px; margin-bottom: 1rem;" />
+        <h1>About MCS Pages</h1>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 1rem auto;">
+            Our mission is to bridge the digital divide by providing compassionate, hands-on technology training and web-based tools to those being left behind—particularly older adults and individuals facing economic hardship. We empower people with the skills, confidence, and online presence they need to reconnect, rebuild, and thrive in an increasingly digital world.
+        </p>
+    </section>
+
+    <!-- Parallax Video Section -->
+    <section class="video-hero">
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="videos/check-wifi-5g.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 style="font-size: 2rem;">Helping others get connected—</h2>
+            <p style="margin-top: 0.5rem;">one moment at a time.</p>
+        </div>
+    </section>
+
+    <!-- Mission and Story Section -->
+    <section class="parallax" style="padding: 3rem 2rem; background-color: rgba(0, 0, 0, 0.85); color: #fff; max-width: 100%;">
+        <div style="max-width: 960px; margin: auto; background-color: rgba(0, 0, 0, 0.75); padding: 2rem; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+            <h2>Why We Exist</h2>
+            <p style="margin-top: 1rem;">
+                MCS Pages began from a place of deep empathy. As someone who grew up helping an older parent and friends navigate technology, I saw firsthand how easily people can be left behind. Years later, after going through a rough season myself—unemployed, nearly losing everything—someone reached out and helped me get back on my feet. That moment stuck with me. This nonprofit is my way of paying it forward.
+            </p>
+
+            <h2 style="margin-top: 3rem;">Who We Help</h2>
+            <p style="margin-top: 1rem;">
+                We serve seniors, low-income families, single parents, and anyone who’s overwhelmed by today’s tech landscape. Whether it’s teaching someone how to video chat with their grandkids or helping a struggling parent launch their first online side hustle—we’re here to bridge the gap.
+            </p>
+
+            <h2 style="margin-top: 3rem;">How You Can Get Involved</h2>
+            <p style="margin-top: 1rem;">
+                Share our mission. Host a free tech training in your area. Donate. Refer someone who needs help. Or just tell your story—because someone out there needs to know they’re not alone. Together, we’re building digital bridges that lead to real hope.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="parallax" style="background-color: rgba(0, 0, 0, 0.9); color: white; text-align: center; padding: 1.5rem 1rem; width: 100%;">
+        <p>MCS Pages Inc. &copy; 2025 • Empowering communities through digital access</p>
+    </footer>
+</body>
+</html>

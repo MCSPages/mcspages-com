@@ -1,0 +1,190 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCS Pages | Bridging the Digital Divide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/mcs_logo.png" />
+  <style>
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #0000FF;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 1.5rem;
+      box-shadow: 0 0 15px rgba(0, 0, 255, 0.4);
+      transition: background 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #0033cc;
+    }
+    .parallax {
+      background-image: url('images/digital_circuit_network.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+    }
+    .nav {
+      background-color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav .logo img {
+      width: 40px;
+    }
+    .nav .menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .nav .menu div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 3px 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #000;
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 6px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .nav .menu {
+        display: flex;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
+</head>
+<body>
+  <div class="nav">
+    <div class="logo">
+      <img src="images/mcs_logo.png" alt="MCS Logo">
+      <span style="color: white; font-weight: bold;">MCS Pages</span>
+    </div>
+    <div class="menu" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="get_help.html">Get Help</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section style="background-color: #000000; color: white; text-align: center; padding: 4rem 2rem;">
+    <img src="images/mcs_logo.png" alt="MCS Pages Logo" style="width: 120px; margin-bottom: 1rem;" />
+    <h1>Bridging the Digital Divide</h1>
+    <p style="font-size: 1.2rem; max-width: 800px; margin: 1rem auto;">
+      MCS Pages is a nonprofit initiative providing free technology training, compassionate support, and web presence tools to older adults and individuals in crisis. We help them reconnect, rebuild, and thrive in today’s digital world.
+    </p>
+  </section>
+
+  <!-- Parallax Video Section -->
+  <section class="video-hero">
+    <video autoplay muted loop playsinline class="video-bg">
+      <source src="videos/check-wifi-5g.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2 style="font-size: 2rem;">Free Tech Help for Real Life</h2>
+      <p style="margin-top: 0.5rem;">We work with older adults, struggling families, and anyone feeling left behind by today's tech.</p>
+    </div>
+  </section>
+
+  <!-- Main Info Section -->
+  <section class="parallax" style="padding: 3rem 2rem;">
+    <div style="max-width: 960px; margin: auto; background-color: rgba(0, 0, 0, 0.75); padding: 2rem; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.5); color: white;">
+      <h2 style="text-align: center;">How We Can Help</h2>
+      <p style="margin-top: 1rem;">
+        MCS Pages offers completely free digital help for people who need it most. We teach older adults how to use devices to reconnect with family. We help single parents and small business owners launch simple websites. We explain confusing tech in plain English and guide you every step of the way.
+      </p>
+      <p style="margin-top: 1rem;">
+        Our volunteers and instructors work with patience, compassion, and real-world experience. Whether it’s learning to text, apply for jobs online, use Zoom, or build your online brand — you don’t have to do it alone.
+      </p>
+      <div style="text-align: center;">
+        <a href="contact.html" class="cta-button">Request Help</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Help -->
+  <section id="impact" class="parallax" style="padding: 3rem 2rem; text-align: center;">
+    <div style="max-width: 960px; margin: auto; background-color: rgba(0, 0, 0, 0.75); padding: 2rem; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.5); color: white;">
+      <h2 style="color: #ffffff;">Who We Help</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+  <div style="flex: 1 1 280px; background-color: rgba(0,0,0,0.6); padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+    <img src="images/senior-using-laptop.jpg" alt="Senior using laptop" style="width: 100%; height: 360px; object-fit: cover; border-radius: 8px;" />
+    <h4 style="color: #00ccff; margin-top: 1rem;">Older Adults</h4>
+    <p style="margin-top: 0.5rem;">Reconnecting with family through video calls, messaging, and digital tools they never had the chance to learn.</p>
+  </div>
+  <div style="flex: 1 1 280px; background-color: rgba(0,0,0,0.6); padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+    <img src="images/mom_baby_laptop.webp" alt="Mom working with baby" style="width: 100%; height: 360px; object-fit: cover; border-radius: 8px;" />
+    <h4 style="color: #00ccff; margin-top: 1rem;">Single Parents</h4>
+    <p style="margin-top: 0.5rem;">Juggling family life and work, building side hustles or improving tech skills to earn income and stay independent.</p>
+  </div>
+  <div style="flex: 1 1 280px; background-color: rgba(0,0,0,0.6); padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+    <img src="images/family-tech-time.jpg" alt="Family learning tech" style="width: 100%; height: 360px; object-fit: cover; border-radius: 8px;" />
+    <h4 style="color: #00ccff; margin-top: 1rem;">Families</h4>
+    <p style="margin-top: 0.5rem;">Embracing technology together to build stronger futures, stay safe online, and grow in confidence together.</p>
+  </div>
+</div>
+        
+        
+      </div>
+	  
+    <a href="#" class="cta-button">Donate on Zeffy</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="parallax" style="background-color: rgba(0, 0, 0, 0.9); color: white; text-align: center; padding: 1.5rem 1rem; width: 100%;">
+    <p>MCS Pages Inc. &copy; 2025 • Empowering communities through digital access</p>
+  </footer>
+</body>
+</html>
